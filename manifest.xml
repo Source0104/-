@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns="" versionCode="0.6">
+	<application setting="true">
+		<name><![CDATA[手机闪光文字]]></name>
+		<identifie><![CDATA[source_sjsgwz]]></identifie>
+		<version><![CDATA[1.0.1]]></version>
+		<type><![CDATA[other]]></type>
+		<ability><![CDATA[用于演唱会，见面会时使用手机疯狂打call]]></ability>
+		<description><![CDATA[用户输入文字，选择效果后，手机屏幕变化]]></description>
+		<author><![CDATA[source0104]]></author>
+		<url><![CDATA[]]></url>
+	</application>
+	<platform>
+		<subscribes>
+		</subscribes>
+		<handles>
+			<message type="text" />
+		</handles>
+		<rule embed="false" />
+		<card embed="false" />
+	</platform>
+	<bindings>
+		<cover>
+			<entry title="入口" do="shanguang" state="" direct="false" />
+		</cover>
+		<menu>
+			<entry title="查看用户信息" do="chakan" state="" direct="false" />
+		</menu>
+	</bindings>
+	<permissions>
+	</permissions>
+	<install><![CDATA[]]></install>
+	<uninstall><![CDATA[]]></uninstall>
+	<upgrade><![CDATA[]]></upgrade>
+</manifest>
