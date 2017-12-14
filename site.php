@@ -11,9 +11,13 @@ class Source_sjsgwzModuleSite extends WeModuleSite {
 
 	public function doMobileShanguang() {
 		//这个操作被定义用来呈现 功能封面
+		 include $this->template('shanguang');	
+
 	}
-	public function doWebChakan() {
+	public function doWebCShakan() {
 		//这个操作被定义用来呈现 管理中心导航菜单
+	 global $_W, $_GPC;
+	 include $this->template('index');	
 	}
 
 }
