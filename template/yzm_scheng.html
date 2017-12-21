@@ -1,0 +1,21 @@
+{template 'common/header'}  
+<div class="panel panel-info">
+
+  <div class="panel-heading">数据输入</div>
+          <div class="panel-body">
+
+<form action="{php echo $this->createWebUrl('yzm_yzm');}" method="post"  >
+<label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label" style="width: 100px;">输入生成数量</label>
+                 	<div class="col-sm-2 col-lg-2">
+                        <input class="form-control" name="number" type="text">
+                    </div>
+<label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label" style="width: 100px;">输入生成的红包金额</label>
+                 	<div class="col-sm-2 col-lg-2">
+                        <input class="form-control" name="money" type="text">
+                    </div>
+                    <div class="col-sm-2 col-lg-2">
+                    <input type="submit" name="submit" value="开始生成" class="btn btn-default" />
+                    </div>
+</form>
+
+{template 'common/footer'}

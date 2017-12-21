@@ -1,0 +1,159 @@
+*{
+    margin:0px;
+    padding:0px;
+    list-style: none;
+}
+.container{
+    max-width:720px;
+    min-width:320px;
+    width:100%;
+    overflow:hidden;
+}
+.head{
+    width:100%;
+    height:3rem;
+    background:#570808;
+    overflow:hidden;
+}
+.head>a>img{
+    width:8%;
+    display: block;
+    margin-left:5%;
+    margin-top:0.8rem;
+    float:left;
+}
+.head>span{
+    float:left;
+    font-family: "微软雅黑";
+    color:#ffffff;
+    margin-left:38%;
+    margin-top:0.8rem;
+    font-size: 1.07rem;
+}
+.main{
+    width:86%;
+    margin:2rem auto 0rem;
+    overflow:hidden;
+}
+.main_left{
+    width:36%;
+    height:10rem;
+    background:#e9d6d6;
+    float:left;
+}
+.main_right{
+    font-size:0.86rem;
+    font-family:"微软雅黑";
+    float:left;
+    margin-left:4%;
+}
+.main_right1{
+    color:#570808;
+    font-weight:800;
+    float: left;
+}
+.main_right1>li{
+     padding-bottom:1rem;
+     letter-spacing: 1px;
+}
+.main_right2{
+    float: left;
+    font-weight:600;
+}
+.main_right2>li{
+    padding-bottom:1rem;
+}
+.sp{
+    padding-left:39%;
+}
+.sp2{
+    padding-left:10%;
+}
+.main_bottom{
+    width:7%;
+    height:1.4rem;
+    background:url("../images/hide.jpg") no-repeat;
+    background-size: 100% 1.4rem;
+    float:right;
+    margin-top:147px;
+}
+.m_hide{
+    width:86%;
+    margin:0 auto;
+    height:13.75rem;
+    border:1px solid #e8dede;
+    border-radius: 8px;
+    margin-top:1rem;
+    font-size:0.86rem;
+    font-family:"微软雅黑";
+    display:none;
+    cursor: pointer;
+}
+.hide_L{
+    margin-left:7%;
+    margin-top:0.8rem;
+}
+.hide_R{
+    margin-top:0.8rem;
+}
+.lesson{
+    width:86%;
+    margin:0 auto;
+    margin-top:1.75rem;
+
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+}
+.lesson>a{
+     width:45.8%;
+     text-decoration:none;
+     color:#ffffff;
+}
+.lesson>a>li{
+    width:100%;
+    background:#eb6100;
+    text-align: center;
+    border-radius:10px;
+}
+.lesson>a>li>h3{
+    padding-top:1.75rem;
+    letter-spacing:3px;
+    font-size:1.4rem;
+}
+.lesson>a>li>span{
+    display: block;
+    padding-bottom:1.37rem;
+}
+/*脚部开始*/
+.footer{
+    width:100%;
+    padding-bottom:0rem;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    left:0;
+}
+.footer>li{
+    width:50%;
+    background:#eb6100;
+    text-align: center;
+
+}
+.footer>li>a{
+    display: block;
+    width:100%;
+    font-size:1.28rem;
+    color:#570808;
+    font-family:"微软雅黑";
+    letter-spacing:5px;
+    font-weight:600;
+    padding:1.25rem 0 1.25rem 0;
+    text-decoration: none;
+}
+
+
+
+

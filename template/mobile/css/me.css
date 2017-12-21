@@ -1,0 +1,51 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+.message{
+    width:87%;
+    margin:1.1rem auto;
+}
+.message>li{
+    width:100%;
+    height:4.5rem;
+    margin-bottom:1rem;
+    border:1px solid #d9c8c8;
+    border-left: none;
+    border-right: none;
+}
+.box{
+    width:15%;
+    height:4.59rem;
+    float:left;
+    background:#e9d6d6;
+}
+.message>li>p{
+    font-weight:600;
+    padding-left:21%;
+    font-size: 0.86rem;
+    font-family:"微软雅黑";
+}
+.p1{
+   margin-top: 0.8rem;
+}
+.p2{
+    margin-top: 0.5rem;
+}
+.reserve{
+    display:block;
+    width:86%;
+    height:3.5rem;
+    background:#eb6100;
+    border-radius:10px;
+    text-align:center;
+    line-height: 3.5rem;
+    margin:0rem auto;
+    font-size:1.3rem;
+}
+.reserve>a{
+    text-decoration: none;
+    color:#ffffff;
+    font-family:"微软雅黑";
+    letter-spacing:5px;
+}

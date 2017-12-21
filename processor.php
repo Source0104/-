@@ -1,13 +1,13 @@
 <?php
 /**
- * 手机闪光文字模块处理程序
+ * 验证码领红包模块处理程序
  *
- * @author source0104
+ * @author 赵龙
  * @url 
  */
 defined('IN_IA') or exit('Access Denied');
 
-class Source_sjsgwzModuleProcessor extends WeModuleProcessor {
+class Yzm_hbModuleProcessor extends WeModuleProcessor {
 	public function respond() {
 		$content = $this->message['content'];
 		//这里定义此模块进行消息处理时的具体过程, 请查看微信文档来编写你的代码

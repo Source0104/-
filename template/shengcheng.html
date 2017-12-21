@@ -1,0 +1,70 @@
+{template 'common/header'}
+  <div class="panel panel-info">
+    <div>
+     <div class="panel-heading"><a href="{php echo $this->createWebUrl('yzm_scheng');}"><input type="button" class="btn btn-primary"  name="yanzheng" value="生成新验证码" /></a><a style="align:right " href="{php echo $this->createWebUrl('yzm_setting');}"><input  style="float:right" type="button" class="btn btn-primary"  name="yanzheng" value="配置支付参数" /></a></div>
+	</div>
+  <div class="panel-heading">筛选</div>
+        <div class="panel-body">
+            <form action="{php echo $this->createWebUrl('Shengcheng');}" method="post"  >
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-1 control-label" style="width: 100px;">领取情况</label>
+                 	   <div class="col-sm-2 col-lg-2">
+                 	   <?php if($_GPC['linqu']==''){ ?>
+						<input name="linqu" type="radio" value="0" />未领取
+						<input name="linqu" type="radio" value="1" />已领取
+                    	<?php }elseif($_GPC['linqu']=='1'){ ?>
+                    	<input name="linqu" type="radio" value="0"  />未领取
+						<input name="linqu" type="radio" value="1" checked="checked"  />已领取
+                    	<?php }elseif($_GPC['linqu']=='0'){ ?>
+                    	<input name="linqu" type="radio" value="0" checked="checked" />未领取
+						<input name="linqu" type="radio" value="1"   />已领取
+                    	<?php }?>
+                    </div>
+                    <label class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label" style="width: 100px;">红包金额</label>
+                    <div class="col-sm-2 col-lg-2">
+                       		<input type="text" class="form-control" value="{$_GPC['money']}" name="money">
+                    </div>
+                                                   
+ 					<label class="col-xs-12 col-sm-2 col-md-2 col-lg-2 control-label" style="width: 60px;">生成时间</label>
+                    <div class="col-sm-2 col-lg-2" style="width:400px">
+    <input type="date"  style="width: 160px;" value="<?php echo $_GPC['star']; ?>" name="star">-<input type="date"  style="width: 160px;" value="<?php echo $_GPC['stop']; ?>" name="stop">
+                    </div>
+                    <div class="col-sm-2 col-lg-2">
+                    <input type="submit" name="submit" value="搜索" class="btn btn-default" />
+                    <button class="btn btn-success" name="out_put" value="output"><i class="fa fa-file"></i> 导出</button>
+                    </div>
+            </form>
+        </div>
+        <div class="panel-heading">验证码详细</div>
+		 <div class="panel panel-default">
+        <div class="table-responsive panel-body">
+        <table class="table table-hover">
+			<thead class="navbar-inner">
+				<tr>
+					<th style="width:10%">验证码</th>
+					<th style="width:10%">红包金额</th>
+                    <th style="width:20%">生成时间</th>
+					<th style="width:10%;">是否领取</th>
+				</tr>
+			</thead>
+			<tbody>
+			<?php foreach($chong as $val){ ?>
+			<tr>
+					<td style="width:10%"><?php echo $val['number']; ?></td>
+					<td style="width:10%"><?php echo $val['money']; ?></td>
+					<td style="width:20%"><?php echo date('Y-m-d',$val['time']); ?></td>
+					<td style="width:10%">
+					<?php  if($val['flag']==0){
+					echo "未领取";
+					}else{
+					echo "已领取";
+					}
+					?> 
+					</td>
+
+			</tr>
+			<?php } ?>
+			</tbody>
+		</table>
+    </div>
+    {$pager}
+{template 'common/footer'}

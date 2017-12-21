@@ -1,35 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns="" versionCode="0.6">
-	<application setting="true">
-		<name><![CDATA[手机闪光文字]]></name>
-		<identifie><![CDATA[source_sjsgwz]]></identifie>
-		<version><![CDATA[1.0.1]]></version>
+	<application setting="false">
+		<name><![CDATA[验证码领红包]]></name>
+		<identifie><![CDATA[yzm_hb]]></identifie>
+		<version><![CDATA[1.0]]></version>
 		<type><![CDATA[other]]></type>
-		<ability><![CDATA[用于演唱会，见面会时使用手机疯狂打call]]></ability>
-		<description><![CDATA[用户输入文字，选择效果后，手机屏幕变化]]></description>
-		<author><![CDATA[source0104]]></author>
+		<ability><![CDATA[验证码，红包]]></ability>
+		<description><![CDATA[验证码，红包]]></description>
+		<author><![CDATA[赵龙]]></author>
 		<url><![CDATA[]]></url>
 	</application>
 	<platform>
 		<subscribes>
+			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="unsubscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="view" />
+			<message type="merchant_order" />
 		</subscribes>
 		<handles>
 			<message type="text" />
+			<message type="image" />
+			<message type="voice" />
+			<message type="video" />
+			<message type="shortvideo" />
+			<message type="location" />
+			<message type="link" />
+			<message type="subscribe" />
+			<message type="qr" />
+			<message type="trace" />
+			<message type="click" />
+			<message type="merchant_order" />
 		</handles>
 		<rule embed="false" />
 		<card embed="false" />
 	</platform>
 	<bindings>
 		<cover>
-			<entry title="入口" do="shanguang" state="" direct="false" />
+			<entry title="入口" do="yzm" state="" direct="false" />
 		</cover>
 		<menu>
-			<entry title="查看用户信息" do="chakan" state="" direct="false" />
+			<entry title="验证码生成" do="shengcheng" state="" direct="false" />
 		</menu>
 	</bindings>
 	<permissions>
 	</permissions>
-	<install><![CDATA[]]></install>
+	<install>	<install><![CDATA[
+CREATE TABLE `ims_yzm` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `uniacid` int(11) NOT NULL COMMENT '商城id',
+  `number` varchar(50) NOT NULL COMMENT '验证码',
+  `money` varchar(50) NOT NULL COMMENT '红包金额',
+  `flag` int(11) NOT NULL DEFAULT '0' COMMENT '验证码状态，0为未领取，1为已领取',
+  `time` int(11) NOT NULL COMMENT '生成时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=271 DEFAULT CHARSET=utf8 COMMENT='验证码';
+]]></install></install>
 	<uninstall><![CDATA[]]></uninstall>
 	<upgrade><![CDATA[]]></upgrade>
 </manifest>
