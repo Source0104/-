@@ -64,6 +64,16 @@ CREATE TABLE `ims_yzm` (
   `time` int(11) NOT NULL COMMENT '生成时间',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=271 DEFAULT CHARSET=utf8 COMMENT='验证码';
+CREATE TABLE `ims_yzm_setting` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `uniacid` int(10) DEFAULT NULL,
+  `appid` varchar(255) DEFAULT NULL,
+  `appsecret` varchar(255) DEFAULT NULL,
+  `mchid` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
+  `ip` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 ]]></install></install>
 	<uninstall><![CDATA[]]></uninstall>
 	<upgrade><![CDATA[]]></upgrade>
